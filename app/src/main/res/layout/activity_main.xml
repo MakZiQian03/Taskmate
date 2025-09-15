@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <!-- App Bar with Toolbar + Avatar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_appbar_gradient"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:titleTextColor="@android:color/white">
+
+                <!-- Content inside the Toolbar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+
+
+                    <!-- Left side: Title + Welcome -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TaskMate"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome, User!"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <!-- Right side: Profile photo -->
+                    <ImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_profile"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_bg"
+                        android:contentDescription="User Avatar" />
+
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp"
+        app:layout_anchor="@+id/linearLayout2"
+        app:layout_anchorGravity="center">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Filters -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="#80FFFFFF"
+            app:cardUseCompatPadding="false"
+            app:strokeWidth="0dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/transparent">
+
+
+                <!-- Search field -->
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Search tasks..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Task List -->
+
+        <!-- Spacer to prevent nav bar overlap -->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTasks"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            android:paddingBottom="96dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_task" />
+
+        <FrameLayout
+            android:id="@+id/bottomSpacer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_nav_inset" />
+
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <!-- Floating pill container -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pillContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@android:color/transparent"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="12dp"
+        app:shapeAppearanceOverlay="@style/Shape.Pill">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pill_nav"
+        android:paddingHorizontal="8dp"
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/bottom_nav_item_tint_selector"
+        app:itemRippleColor="@color/bottom_nav_ripple_color"
+        app:itemTextColor="@color/bottom_nav_item_tint_selector"
+        app:layout_anchor="@+id/pillContainer"
+        app:layout_anchorGravity="start|bottom"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

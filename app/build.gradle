@@ -1,0 +1,72 @@
+// ADDED: If using Google Services, add plugin classpath in settings or buildscript
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+// Load GEMINI_API_KEY from local.properties or environment variable
+def GEMINI_KEY = ""
+def lp = rootProject.file("local.properties")
+if (lp.exists()) {
+    def Properties p = new Properties()
+    lp.withInputStream { p.load(it) }
+    GEMINI_KEY = p.getProperty("GEMINI_API_KEY", "")
+}
+if (!GEMINI_KEY) {
+    GEMINI_KEY = System.getenv("GEMINI_API_KEY") ?: ""
+}
+
+android {
+    namespace "my.edu.utar.taskmate"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "my.edu.utar.taskmate"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "String", "GEMINI_API_KEY", '"' + GEMINI_KEY + '"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // Material3 (latest stable)
+    implementation 'com.google.android.material:material:1.12.0' 
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:33.1.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-storage'
+
+    // Google Maps (single version)
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.libraries.places:places:3.5.0'
+
+    // Glide (for images)
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+}

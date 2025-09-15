@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text & background -->
+    <color name="background">@color/md_theme_background</color>
+    <color name="card_background">@color/md_theme_surface</color>
+    <color name="text_primary">@color/md_theme_onBackground</color>
+    <color name="text_on_primary">@color/md_theme_onPrimary</color>
+
+    <!-- Buttons -->
+    <color name="primary">@color/md_theme_primary</color>
+    <color name="accent">#4CAF50</color> <!-- Green button -->
+
+    <!-- Existing colors -->
+    <color name="md_theme_primary">#D0BCFF</color>
+    <color name="md_theme_onPrimary">#000000</color>
+    <color name="md_theme_secondary">#CCC2DC</color>
+    <color name="md_theme_background">#121212</color>
+    <color name="md_theme_onBackground">#FFFFFF</color>
+    <color name="md_theme_surface">#121212</color>
+    <color name="md_theme_onSurface">#FFFFFF</color>
+    <color name="purple_500">#BB86FC</color>
+    <color name="text_secondary">#B0B0B0</color>
+
+    <color name="progress_track">#33FFFFFF</color>
+
+
+</resources>

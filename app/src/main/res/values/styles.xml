@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base light theme -->
+    <style name="Theme.TaskMate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+
+        <!-- Secondary / accent colors -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorOnSecondary">@color/text_on_primary</item>
+
+        <!-- Background & surface -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- Toolbar / status bar -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+
+        <!-- Material components -->
+        <item name="materialButtonStyle">@style/Widget.TaskMate.Button</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.TaskMate.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Base filled pill -->
+    <style name="Widget.TaskMate.Button.Pill" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">999dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Outlined pill -->
+    <style name="Widget.TaskMate.Button.Pill.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">999dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Theme.TaskMate.Transparent" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Shape.Pill">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Perfect pill -->
+    </style>
+
+
+</resources>

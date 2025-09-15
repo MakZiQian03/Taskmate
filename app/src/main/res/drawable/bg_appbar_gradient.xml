@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Round the bottom if you want a curved footer; change to 0dp if you want squared -->
+    <corners
+        android:bottomLeftRadius="48dp"
+        android:bottomRightRadius="48dp"/>
+
+    <gradient
+        android:type="linear"
+        android:angle="0"
+        android:startColor="@color/headerStart"
+        android:endColor="@color/headerEnd"/>
+</shape>

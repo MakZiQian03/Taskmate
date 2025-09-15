@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Taskmate</string>
+
+    <!-- Menu titles -->
+    <string name="menu_home">Home</string>
+    <string name="menu_post">Post</string>
+    <string name="menu_my_tasks">My Tasks</string>
+    <string name="menu_ai_chatbot">AI Chat Bot</string>
+    <string name="menu_profile">Profile</string>
+
+    <!-- Demo task detail placeholders -->
+    <string name="demo_task_title">Demo Task</string>
+    <string name="demo_task_desc">This is a demo task description.</string>
+    <string name="demo_task_payment">RM 0</string>
+    <string name="demo_task_location">Unknown Location</string>
+    <string name="demo_task_time">—</string>
+
+    <!-- Spinners -->
+    <string-array name="task_types">
+        <item>All</item>
+        <item>Errands</item>
+        <item>Cleaning</item>
+        <item>Delivery</item>
+    </string-array>
+    <string-array name="distances">
+        <item>Any distance</item>
+        <item>&lt; 1 km</item>
+        <item>&lt; 5 km</item>
+        <item>&lt; 10 km</item>
+    </string-array>
+    <string-array name="time_posted">
+        <item>Any time</item>
+        <item>Today</item>
+        <item>This week</item>
+    </string-array>
+
+    <string name="cd_splash_logo">Taskmate logo</string>
+</resources>

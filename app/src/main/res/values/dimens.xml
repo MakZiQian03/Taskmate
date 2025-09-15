@@ -1,0 +1,4 @@
+<resources>
+    <!-- Height of pill nav (~56dp) + card elevation visual space + anchor margin -->
+    <dimen name="bottom_nav_inset">63dp</dimen>
+</resources>

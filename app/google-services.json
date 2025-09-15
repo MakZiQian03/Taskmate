@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "249191683388",
+    "firebase_url": "https://login-register-firebase-4e973-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "login-register-firebase-4e973",
+    "storage_bucket": "login-register-firebase-4e973.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249191683388:android:672cb867759a99e5cf7a39",
+        "android_client_info": {
+          "package_name": "my.edu.utar.taskmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5-3k5TQxfOrZH-VIlhzcHpLZt791jMIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

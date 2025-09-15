@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text & background -->
+    <color name="background">@color/md_theme_background</color>
+    <color name="card_background">@color/md_theme_surface</color>
+    <color name="text_primary">@color/md_theme_onBackground</color>
+    <color name="text_on_primary">@color/md_theme_onPrimary</color>
+
+    <!-- Buttons -->
+    <color name="primary">@color/md_theme_primary</color>
+    <color name="accent">#4CAF50</color> <!-- Green button -->
+
+    <!-- Existing colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="md_theme_primary">#6750A4</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_secondary">#625B71</color>
+    <color name="md_theme_background">#FFFFFF</color>
+    <color name="md_theme_onBackground">#000000</color>
+    <color name="md_theme_surface">#FFFFFF</color>
+    <color name="md_theme_onSurface">#000000</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="accent_dark">#018786</color>
+    <color name="text_secondary">#757575</color> <!-- Gray for secondary text -->
+
+    <color name="nav_surface">#FFFFFFFF</color>
+    <color name="nav_item_active">#4121BE</color>
+    <color name="nav_item_inactive">#804121BE</color>
+    <color name="ripple_base">#1F000000</color>
+
+    <color name="headerStart">#6B3CE6</color>
+    <color name="headerEnd">#4121BE</color>
+
+    <color name="progress_track">#33000000</color> <!-- 20% black -->
+
+
+
+</resources>

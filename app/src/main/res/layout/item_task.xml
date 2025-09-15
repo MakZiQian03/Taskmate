@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Task Title -->
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Task Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Task Description -->
+        <TextView
+            android:id="@+id/tvTaskDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the description of the task"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Payment -->
+        <TextView
+            android:id="@+id/tvTaskPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RM 20"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tvTaskLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Location"
+            android:textSize="13sp"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <!-- Accept Button -->
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone" /> <!-- default hidden, shown dynamically -->
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
